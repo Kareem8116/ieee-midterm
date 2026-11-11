@@ -61,9 +61,15 @@
       align-items: center;
       gap: 18px;
     }
-    .ieee-logo svg { width: 44px; height: 44px; flex-shrink: 0; }
-    .header-text h1 { color: #fff; font-size: 1.2rem; font-weight: 700; }
-    .header-text p  { color: rgba(255,255,255,.8); font-size: .8rem; margin-top: 2px; }
+    .ieee-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .ieee-logo svg { width: 44px; height: 44px; }
+    .header-text h1 { color: #fff; font-size: 1.25rem; font-weight: 700; letter-spacing: .3px; }
+    .header-text p  { color: rgba(255,255,255,.8); font-size: .82rem; margin-top: 2px; }
     .timer-pill {
       margin-left: auto;
       background: rgba(255,255,255,.18);
@@ -317,11 +323,13 @@
 <!-- HEADER -->
 <header class="header" id="mainHeader">
   <div class="header-inner">
-    <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="8" y="8" width="28" height="28" rx="4" fill="rgba(255,255,255,0.15)"/>
-      <path d="M22 10 L34 22 L22 34 L10 22 Z" fill="rgba(255,255,255,0.9)"/>
-      <text x="22" y="26" text-anchor="middle" font-size="9" font-weight="800" fill="#003865" font-family="Arial">IEEE</text>
-    </svg>
+    <div class="ieee-logo">
+      <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="8" width="28" height="28" rx="4" fill="rgba(255,255,255,0.15)"/>
+        <path d="M22 10 L34 22 L22 34 L10 22 Z" fill="rgba(255,255,255,0.9)"/>
+        <text x="22" y="26" text-anchor="middle" font-size="9" font-weight="800" fill="#003865" font-family="Arial">IEEE</text>
+      </svg>
+    </div>
     <div class="header-text">
       <h1>IEEE KSB – Networking Committee</h1>
       <p id="headerSub">Midterm Quiz &nbsp;|&nbsp; Introduction to Networking &nbsp;|&nbsp; 30 Questions</p>
