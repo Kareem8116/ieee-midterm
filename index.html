@@ -366,7 +366,7 @@
     </div>
     <div class="header-text">
       <h1>IEEE KSB – Networking Committee</h1>
-      <p id="headerSub">Midterm Quiz &nbsp;|&nbsp; Introduction to Networking &nbsp;|&nbsp; 25 Questions</p>
+      <p id="headerSub">Midterm Quiz &nbsp;|&nbsp; Introduction to Networking &nbsp;|&nbsp; 24 Questions</p>
     </div>
     <div class="timer-pill" id="timerDisplay" style="display:none">20:00</div>
   </div>
@@ -407,10 +407,10 @@
     <h2 class="welcome-title">Networking Midterm Quiz</h2>
     <p class="welcome-sub">Introduction to Networking &nbsp;·&nbsp; IEEE KSB Networking Committee</p>
     <div class="info-grid">
-      <div class="info-card"><div class="label">Questions</div><div class="value">25</div></div>
+      <div class="info-card"><div class="label">Questions</div><div class="value">24</div></div>
       <div class="info-card"><div class="label">Time Limit</div><div class="value">20 Minutes</div></div>
       <div class="info-card"><div class="label">MCQ</div><div class="value">14 Qs</div></div>
-      <div class="info-card"><div class="label">True/False</div><div class="value">11 Qs</div></div>
+      <div class="info-card"><div class="label">True/False</div><div class="value">10 Qs</div></div>
     </div>
     <div class="instructions">
       <h3>📋 Instructions</h3>
@@ -432,7 +432,7 @@
   <!-- QUIZ PANEL -->
   <div class="panel" id="panelQuiz">
     <div class="dots-nav-strip">
-      <div class="q-num" id="qCounter">Question 1 of 25</div>
+      <div class="q-num" id="qCounter">Question 1 of 24</div>
       <div class="dots-nav-strip-inner" id="dotsRow"></div>
     </div>
     <div class="question-scroll-area">
@@ -458,7 +458,7 @@
     <div class="result-header">
       <div class="score-circle">
         <span class="score-number" id="scoreNum">0</span>
-        <span class="score-out">out of 25</span>
+        <span class="score-out">out of 24</span>
         <span class="score-pct" id="scorePct">0%</span>
       </div>
       <p class="result-name" id="resultName"></p>
@@ -509,7 +509,7 @@
 
 <script>
 /* ══════════════════════════════════════════════
-   QUESTIONS — 14 MCQ + 11 True/False = 25 total
+   QUESTIONS — 14 MCQ + 10 True/False = 24 total
    type: 'mcq' | 'tf'
    ans: index for mcq (0-3), 0=True / 1=False for tf
 ══════════════════════════════════════════════ */
@@ -600,7 +600,7 @@ const QUESTIONS = [
     ans: 1
   },
 
-  // ── True/False (11) ──
+  // ── True/False (10) ──
   {
     type: 'tf',
     q: "The TCP/IP model's Application Layer is functionally broader than the OSI model's Application Layer, as it is a consolidation of the OSI's Application, Presentation, and Session layers.",
@@ -630,12 +630,6 @@ const QUESTIONS = [
     q: "Because UDP (User Datagram Protocol) is connectionless and provides no explicit mechanism for guaranteed delivery or flow control, it is entirely unsuitable for any application that requires an orderly stream of data, such as real-time video streaming.",
     opts: ["True","False"],
     ans: 1
-  },
-  {
-    type: 'tf',
-    q: "Classless Inter-Domain Routing (CIDR) notation was primarily introduced to replace the older, inefficient classful addressing system and to improve the efficiency of router table management.",
-    opts: ["True","False"],
-    ans: 0
   },
   {
     type: 'tf',
