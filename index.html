@@ -36,6 +36,13 @@
 
     /* ─── QUIZ MODE ─── */
     body.quiz-mode { overflow: hidden; }
+    body.quiz-mode, body.quiz-mode * {
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+      -webkit-touch-callout: none !important;
+    }
     body.quiz-mode .container {
       padding: 0;
       height: calc(100vh - var(--header-h, 76px));
@@ -1165,13 +1172,13 @@ function _beaconSubmit(note) {
   } catch(e) {}
 }
 
-// 3) Disable copy, cut, selection, right-click & shortcuts during quiz
-['copy', 'cut', 'selectstart', 'contextmenu'].forEach(evt => {
+// 3) Disable copy, cut, selection, drag, right-click & shortcuts during quiz
+['copy', 'cut', 'selectstart', 'contextmenu', 'dragstart'].forEach(evt => {
   document.addEventListener(evt, function(e) {
     if (!quizActive) return;
     e.preventDefault();
     if (evt === 'copy' || evt === 'cut') showToast('⚠️ Copying is disabled during the exam!');
-  });
+  }, { capture: true });
 });
 
 document.addEventListener('keydown', function(e) {
@@ -1184,7 +1191,7 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && ['i', 'j', 'c'].includes(k))) {
     e.preventDefault();
   }
-});
+}, { capture: true });
 </script>
 </body>
 </html>
