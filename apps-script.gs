@@ -53,7 +53,7 @@ function doGet(e) {
       const pNum = parseFloat(pRaw);
       const pct  = isNaN(pNum) ? 0 : (pNum < 1.5 ? Math.round(pNum*100) : Math.round(pNum));
       return {
-        num: i+1, name: r[iName]||'', score: r[iScore]||0, total: r[iTotal]||30,
+        num: i+1, name: r[iName]||'', score: r[iScore]||0, total: r[iTotal]||25,
         pct, pass: String(r[iStat]||'').includes('Passed'),
         submittedAt: r[iSubAt]||'', timeTaken: r[iTime]||''
       };

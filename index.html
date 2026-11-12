@@ -366,7 +366,7 @@
     </div>
     <div class="header-text">
       <h1>IEEE KSB – Networking Committee</h1>
-      <p id="headerSub">Midterm Quiz &nbsp;|&nbsp; Introduction to Networking &nbsp;|&nbsp; 30 Questions</p>
+      <p id="headerSub">Midterm Quiz &nbsp;|&nbsp; Introduction to Networking &nbsp;|&nbsp; 25 Questions</p>
     </div>
     <div class="timer-pill" id="timerDisplay" style="display:none">20:00</div>
   </div>
@@ -407,10 +407,10 @@
     <h2 class="welcome-title">Networking Midterm Quiz</h2>
     <p class="welcome-sub">Introduction to Networking &nbsp;·&nbsp; IEEE KSB Networking Committee</p>
     <div class="info-grid">
-      <div class="info-card"><div class="label">Questions</div><div class="value">30</div></div>
+      <div class="info-card"><div class="label">Questions</div><div class="value">25</div></div>
       <div class="info-card"><div class="label">Time Limit</div><div class="value">20 Minutes</div></div>
-      <div class="info-card"><div class="label">MCQ</div><div class="value">16 Qs</div></div>
-      <div class="info-card"><div class="label">True/False</div><div class="value">14 Qs</div></div>
+      <div class="info-card"><div class="label">MCQ</div><div class="value">14 Qs</div></div>
+      <div class="info-card"><div class="label">True/False</div><div class="value">11 Qs</div></div>
     </div>
     <div class="instructions">
       <h3>📋 Instructions</h3>
@@ -432,7 +432,7 @@
   <!-- QUIZ PANEL -->
   <div class="panel" id="panelQuiz">
     <div class="dots-nav-strip">
-      <div class="q-num" id="qCounter">Question 1 of 30</div>
+      <div class="q-num" id="qCounter">Question 1 of 25</div>
       <div class="dots-nav-strip-inner" id="dotsRow"></div>
     </div>
     <div class="question-scroll-area">
@@ -458,7 +458,7 @@
     <div class="result-header">
       <div class="score-circle">
         <span class="score-number" id="scoreNum">0</span>
-        <span class="score-out">out of 30</span>
+        <span class="score-out">out of 25</span>
         <span class="score-pct" id="scorePct">0%</span>
       </div>
       <p class="result-name" id="resultName"></p>
@@ -509,15 +509,15 @@
 
 <script>
 /* ══════════════════════════════════════════════
-   QUESTIONS — 16 MCQ + 14 True/False = 30 total
+   QUESTIONS — 14 MCQ + 11 True/False = 25 total
    type: 'mcq' | 'tf'
    ans: index for mcq (0-3), 0=True / 1=False for tf
 ══════════════════════════════════════════════ */
 const QUESTIONS = [
-  // ── MCQ (16) ──
+  // ── MCQ (14) ──
   {
     type: 'mcq',
-    q: "A network is defined as a collection of autonomous computers that are connected together to provide the user with a certain service (application). Which of the following best describes this definition?",
+    q: "A network is defined as a collection of autonomous computers that are connected together to provide the user with a certain service (application).",
     opts: ["Dependent devices sharing a central server","Autonomous computers providing a service (application)","Passive devices used only for storage","Isolated systems with no shared resources"],
     ans: 1
   },
@@ -535,15 +535,15 @@ const QUESTIONS = [
   },
   {
     type: 'mcq',
-    q: "According to the OSI model, which layer is referred to as \"Layer 7\"?",
-    opts: ["Transport Layer","Network Layer","Session Layer","Application Layer"],
+    q: "According to the provided text, which layer of the OSI model is referred to as \"Layer 7\"?",
+    opts: ["Transport Layer","Network Layer","Session Layer","Application layer"],
     ans: 3
   },
   {
     type: 'mcq',
     q: "The primary data unit at the Network Layer of the OSI model is known as a:",
     opts: ["Frame","Bit","Segment","Packet"],
-    ans: 2
+    ans: 3
   },
   {
     type: 'mcq',
@@ -571,13 +571,7 @@ const QUESTIONS = [
   },
   {
     type: 'mcq',
-    q: "A Bridge is essentially a two-port device that segments a network based on:",
-    opts: ["IP address","MAC address","Protocol type","Port number"],
-    ans: 1
-  },
-  {
-    type: 'mcq',
-    q: "A device that translates between protocols, often connecting two vastly different networks, and operates at all seven OSI layers is a:",
+    q: "A device that translates between protocols, often connecting two vastly different networks (e.g., a LAN to the Internet), and operates at all seven OSI layers is a:",
     opts: ["Router","Switch","Bridge","Gateway"],
     ans: 3
   },
@@ -589,30 +583,24 @@ const QUESTIONS = [
   },
   {
     type: 'mcq',
-    q: "Which protocol is used to automatically assign IP addresses, subnet masks, and default gateways to client devices?",
-    opts: ["ARP (Address Resolution Protocol)","DHCP (Dynamic Host Configuration Protocol)","DNS (Domain Name System)","ICMP (Internet Control Message Protocol)"],
-    ans: 1
-  },
-  {
-    type: 'mcq',
-    q: "Which protocol is often used by web browsers to resolve a URL into an IP address?",
+    q: "The Uniform Resource Locator (URL) is an address format used in the Application Layer to locate a resource on the Internet. Which protocol is often used by web browsers to resolve a URL into an IP address?",
     opts: ["DNS","ARP","RIP","DHCP"],
     ans: 0
   },
   {
     type: 'mcq',
     q: "The network topology in which all devices connect to a single central hub or switch is known as a:",
-    opts: ["Ring topology","Bus topology","Mesh topology","Star topology"],
+    opts: ["Ring topology","Bus topology","Mash topology","Star topology"],
     ans: 3
   },
   {
     type: 'mcq',
-    q: "Which type of transmission medium encodes data as pulses of light and is highly resistant to Electromagnetic Interference (EMI)?",
+    q: "Which type of transmission medium is described as having data encoding as pulses of light (infrared or visible light), and is highly resistant to Electromagnetic Interference (EMI)?",
     opts: ["Coaxial Cable","Fiber Optic Cable","Twisted Pair Cable","Satellite Link"],
     ans: 1
   },
 
-  // ── True/False (14) ──
+  // ── True/False (11) ──
   {
     type: 'tf',
     q: "The TCP/IP model's Application Layer is functionally broader than the OSI model's Application Layer, as it is a consolidation of the OSI's Application, Presentation, and Session layers.",
@@ -627,15 +615,9 @@ const QUESTIONS = [
   },
   {
     type: 'tf',
-    q: "The network definition implies a robust system: 'A collection of autonomous computers…'. This autonomy ensures that the failure of a single computer is unlikely to cause a catastrophic failure of the entire network.",
+    q: "The network definition in the file implies a robust system: \"A collection of autonomous computers...\". This autonomy ensures that the failure of a single computer is unlikely to cause a catastrophic failure of the entire network.",
     opts: ["True","False"],
     ans: 0
-  },
-  {
-    type: 'tf',
-    q: "Network Address Translation (NAT) is fundamentally a Layer 4 (Transport Layer) function because it involves rewriting the source and/or destination port numbers in a packet.",
-    opts: ["True","False"],
-    ans: 1
   },
   {
     type: 'tf',
@@ -645,7 +627,7 @@ const QUESTIONS = [
   },
   {
     type: 'tf',
-    q: "Because UDP is connectionless and provides no explicit mechanism for guaranteed delivery or flow control, it is entirely unsuitable for any application that requires real-time video streaming.",
+    q: "Because UDP (User Datagram Protocol) is connectionless and provides no explicit mechanism for guaranteed delivery or flow control, it is entirely unsuitable for any application that requires an orderly stream of data, such as real-time video streaming.",
     opts: ["True","False"],
     ans: 1
   },
@@ -669,7 +651,7 @@ const QUESTIONS = [
   },
   {
     type: 'tf',
-    q: "In the OSI model, user-facing functionality and application access reside entirely within the Presentation Layer (Layer 6).",
+    q: "A network is defined by providing a service (application). In the OSI model, this user-facing functionality and application access reside entirely within the Presentation Layer (Layer 6).",
     opts: ["True","False"],
     ans: 1
   },
@@ -681,19 +663,7 @@ const QUESTIONS = [
   },
   {
     type: 'tf',
-    q: "The Spanning Tree Protocol (STP) is a Layer 3 (Network Layer) mechanism designed to prevent routing loops in large, complex IP networks.",
-    opts: ["True","False"],
-    ans: 1
-  },
-  {
-    type: 'tf',
     q: "In the Domain Name System (DNS), the function of the recursive query is to ask a DNS server to fully resolve the name, starting from the root server if necessary, and return a single answer to the client.",
-    opts: ["True","False"],
-    ans: 0
-  },
-  {
-    type: 'tf',
-    q: "Logical Link Control (LLC) places information in the frame that identifies which Network layer protocol is being used for the frame.",
     opts: ["True","False"],
     ans: 0
   }
@@ -1070,7 +1040,7 @@ function _renderAdminTable(all) {
     <div class="stat-card"><div class="stat-num">${avg}%</div><div class="stat-label">Average Score</div></div>
     <div class="stat-card"><div class="stat-num">${passed}</div><div class="stat-label">Passed</div></div>
     <div class="stat-card"><div class="stat-num">${total - passed}</div><div class="stat-label">Failed</div></div>
-    <div class="stat-card"><div class="stat-num">${highest}/30</div><div class="stat-label">Highest Score</div></div>
+    <div class="stat-card"><div class="stat-num">${highest}/${QUESTIONS.length}</div><div class="stat-label">Highest Score</div></div>
   `;
 
   const tbody = document.getElementById('resultsBody');
