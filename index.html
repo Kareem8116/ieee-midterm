@@ -853,7 +853,7 @@ function renderQuestion() {
       lbl.className = 'option' + (answers[currentQ]===i?' selected':'');
       lbl.innerHTML = `
         <input type="radio" name="q" value="${i}" ${answers[currentQ]===i?'checked':''}>
-        <span class="option-letter" style="${i===0?'background:#16a34a;color:#fff':answers[currentQ]===1?'background:#dc2626;color:#fff':''}">${opt[0]}</span>
+        <span class="option-letter">${opt[0]}</span>
         <span class="option-text">${opt}</span>`;
       lbl.onclick = () => selectOption(i);
       wrap.appendChild(lbl);
